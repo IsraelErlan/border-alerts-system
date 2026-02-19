@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  redis-test-18: 
+    image: redis 
+    ports:
+      - 6379:6379
+
+
+  producer-test-18:
+    build: producer/.
+    environment:
+      - REDIS_HOST=redis-test-18
