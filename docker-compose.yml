@@ -7,7 +7,20 @@ services:
       - 6379:6379
 
 
+  mongo-test-18:
+    image: mongo 
+    ports:
+      - 27018:27017
+
+
   producer-test-18:
     build: producer/.
     environment:
       - REDIS_HOST=redis-test-18
+
+
+  consumer-test-18:
+    build: consumer/.
+    environment:
+      - REDIS_HOST=redis-test-18
+      - MONGO_HOST=mongo-test-18
