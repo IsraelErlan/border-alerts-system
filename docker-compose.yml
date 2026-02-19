@@ -24,3 +24,10 @@ services:
     environment:
       - REDIS_HOST=redis-test-18
       - MONGO_HOST=mongo-test-18
+
+
+  api-test-18:
+    build: analytics-api/.
+    environment:
+      - REDIS_HOST=redis-test-18
+      - MONGO_HOST=mongo-test-18

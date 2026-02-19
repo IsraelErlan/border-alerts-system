@@ -6,14 +6,14 @@ router = APIRouter()
 @router.get('/analytics/alerts-by-border-and-priority')
 def get_alerts_by_border_and_priority(): 
     try:
-        pass 
+        dal.get_alerts_by_border_and_priority()
     except Exception as e: 
         raise HTTPException(status_code=400, detail=str(e))
 
 @router.get('/analytics/top-urgent-zones')
 def get_top_urgent_zones():
     try:
-        pass 
+        dal.get_top_urgent_zones()
     except Exception as e: 
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -21,7 +21,7 @@ def get_top_urgent_zones():
 @router.get('/analytics/distance-distribution')
 def get_distance_distribution():
     try:
-        pass 
+        dal.get_distance_distribution()
     except Exception as e: 
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -29,7 +29,7 @@ def get_distance_distribution():
 @router.get('/analytics/low-visibility-high-activity')
 def get_low_visibility_high_activity():
     try:
-        pass 
+        dal.get_low_visibility_high_activity()
     except Exception as e: 
         raise HTTPException(status_code=400, detail=str(e))
 
@@ -37,6 +37,6 @@ def get_low_visibility_high_activity():
 @router.get('/analytics/hot-zones')
 def get_hot_zones():
     try:
-        pass 
+        dal.get_hot_zones()
     except Exception as e: 
         raise HTTPException(status_code=400, detail=str(e))
